@@ -11,7 +11,7 @@ int Multiply (int firstNumber, int secondNumber)
 
 // 2
 int RaiseToPowerOfThree (int number)
-{ return (number * number * number); }
+{ return (int)Math.Pow(number, 3); }
 
 // 3
 bool IsStringEmpty (string str)
@@ -51,7 +51,7 @@ firstNumber = int.Parse(Console.ReadLine());
 if (IsLargerThanForty(firstNumber))
     Console.WriteLine("The number is larger than 40." + lineBreak);
 else
-    Console.WriteLine("The number is smaller than 40." + lineBreak);
+    Console.WriteLine("The number is smaller or equal to 40." + lineBreak);
 
 Console.WriteLine("// A5");
 firstNumber = int.Parse(Console.ReadLine());
