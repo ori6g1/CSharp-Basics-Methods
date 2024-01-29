@@ -150,3 +150,29 @@ Console.WriteLine("// B6");
 Console.Write("Enter a string to count its spaces: ");
 str1 = Console.ReadLine();
 Console.WriteLine("The amount of spaces in the string is: " + CountSpaces(str1) + lineBreak);
+
+// C - The Collatz Conjecture
+int CalculateCollatz (int num)
+{
+    if ((num % 2) == 0)
+        return num / 2;
+    return (3 * num) + 1;
+}
+
+int CountCollatzSteps (int num)
+{
+    int stepsCount = 0;
+
+    while (num > 1)
+    {
+        stepsCount++;
+        num = CalculateCollatz(num);
+    }
+
+    return stepsCount;
+}
+
+Console.WriteLine("// C");
+Console.Write("Enter a number to count its Collatz Conjecture steps: ");
+firstNumber = int.Parse(Console.ReadLine());
+Console.WriteLine("The number of steps is: " + CountCollatzSteps(firstNumber) + lineBreak);
